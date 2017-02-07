@@ -1,10 +1,11 @@
+
 $('#enter-btn').on('click', function() {
   var newTitle = $('#title-input').val();
   var newUrl = $('#url-input').val();
-  $('h2').text(newTitle);
-  $('div').text(newUrl);
-})
+  $('.web-title').text(newTitle);
+  $('.web-url').text(newUrl);
+});
 
-$('.read-btn').on('click', function() {
-  $('.read-btn').toggleClass('.read');
-})
+// $('.read-btn').on('click', function() {
+//   $('.read-btn').toggleClass('.read');
+// })
