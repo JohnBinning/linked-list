@@ -13,6 +13,7 @@ section {
 img {
   width: 1em;
 }
+
 .section1 h1 {
   color: white;
   font-family: 'Open Sans', sans-serif;
@@ -39,3 +40,10 @@ input {
   font-family: 'Open Sans', sans-serif;
   font-size: .65em;
   margin-left: 10%;
+
+}
+
+.read-btn.read {
+  text: #f05a28;
+  background-color: #f2f4f4;
+}
