@@ -9,6 +9,10 @@ section {
 .section1 {
   background-color: #455A64;
 }
+
+img {
+  width: 1em;
+}
 .section1 h1 {
   color: white;
   font-family: 'Open Sans', sans-serif;
@@ -35,8 +39,3 @@ input {
   font-family: 'Open Sans', sans-serif;
   font-size: .65em;
   margin-left: 10%;
-
-
-img {
-  width: 1em;
-}
