@@ -9,7 +9,31 @@ section {
 .section1 {
   background-color: #455A64;
 }
+.section1 h1 {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
+  margin-left: 10%;
+}
 
 .section2 {
   background-color: #CFD8DC;
+}
+
+input {
+  width: 22vw;
+  height: 5vh;
+  margin-left: 10%;
+}
+
+#enter-btn {
+  background-color: #FFC107;
+  border: 0;
+  color: white;
+  width: 22vw;
+  height: 5vh;
+  font-family: 'Open Sans', sans-serif;
+  font-size: .65em;
+  margin-left: 10%;
+
 }
