@@ -1,3 +1,4 @@
+
 // $('#enter-btn').on('click', function() {
 //   var newTitle = $('#title-input').val();
 //   var newUrl = $('#url-input').val();
@@ -36,3 +37,16 @@ function makeLink (titleValue){
 // make a function that calls the above function on each keyup titleinput.keyup(abovefunction)
 
 // call the second function on page load - globally
+=======
+
+$('#enter-btn').on('click', function() {
+  var newTitle = $('#title-input').val();
+  var newUrl = $('#url-input').val();
+  $('.web-title').text(newTitle);
+  $('.web-url').text(newUrl);
+});
+
+// $('.read-btn').on('click', function() {
+//   $('.read-btn').toggleClass('.read');
+// })
+
