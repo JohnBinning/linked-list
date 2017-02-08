@@ -80,30 +80,17 @@ article {
   font-weight: 800;
   color: #455A64;
   text-align: left;
-
-  /*padding: 10px 0;
-  border-bottom: 1px solid #cfd8dc;*/
-
-  padding: 1%;
-  border-bottom: 2px solid;
-  border-color: #CFD8DC;
+  padding: 10px 0;
+  border-bottom: 2px solid #cfd8dc;
 }
-
-
 
 .web-url {
   font-size: 18px;
   font-weight: 400;
   color: #607D8B;
   text-align: left;
-
-  /*padding: 15px 0;
-  border-bottom: 1px solid #cfd8dc;*/
-
-  padding: 1%;
-  border-bottom: 2px solid;
-  border-color: #CFD8DC;
-
+  padding: 15px 0;
+  border-bottom: 2px solid #cfd8dc;
 }
 
 hr {
