@@ -1,7 +1,5 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  /*align-items: center;
-  justify-content: center;*/
 }
 
 section {
@@ -12,9 +10,13 @@ section {
   text-align: center;
 }
 
+
+
 .section1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #455A64;
-  /*display: flex;*/
 }
 
 .section1 h1 {
@@ -123,14 +125,28 @@ hr {
 }
 
 
-/*tablet layout, less than 768px more than 480*/
+/*tablet layout*/
 @media screen and (max-width: 768px) {
 
+section {
+  width: 100vw;
+}
 
-  /*display: flex;
-  flex-direction: column;*/
+input {
+  width: 75vw;
+}
+
+#enter-btn {
+  width: 75vw;
+}
+
+
+}
 
 
 
+@media screen and (max-width: 520px) {
 
+.section1 h1 {
+  font-size: 2.3em;
 }
