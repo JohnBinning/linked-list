@@ -10,8 +10,6 @@ section {
   text-align: center;
 }
 
-
-
 .section1 {
   display: flex;
   justify-content: center;
@@ -25,6 +23,10 @@ section {
   font-weight: 800;
   font-size: 3.5em;
   margin-bottom: 60px;
+}
+
+h2 {
+  margin-top: 15px;
 }
 
 img {
@@ -61,12 +63,8 @@ input {
   background-color: #ffd773;
 }
 
-
-/*section 2:*/
 .section2 {
   background-color: #CFD8DC;
-  /*display: flex;
-  flex-direction: column;*/
 }
 
 article {
@@ -82,7 +80,8 @@ article {
   font-weight: 800;
   color: #455A64;
   text-align: left;
-  padding: 1%;
+  padding: 10px 0;
+  border-bottom: 1px solid #cfd8dc;
 }
 
 .web-url {
@@ -90,7 +89,8 @@ article {
   font-weight: 400;
   color: #607D8B;
   text-align: left;
-  padding: 1%;
+  padding: 15px 0;
+  border-bottom: 1px solid #cfd8dc;
 }
 
 hr {
@@ -102,18 +102,19 @@ hr {
     background: none;
     font-size: 14px;
     color: #455A64;
-    border-bottom: 1px solid #455a64;
+    border-bottom: .2px solid #455a64;
     padding: 0;
 }
 
 .read-btn {
   float: left;
+  padding-top: 10px;
 }
 
 .delete-btn {
   float: right;
+  padding-top: 10px;
 }
-
 
 
 /*jQueries*/
@@ -145,15 +146,9 @@ input {
   height: 65vh;
 }
 
-.container {
-}
-
-}
-
-
 
 @media screen and (max-width: 520px) {
 
 .section1 h1 {
-  font-size: 2.3em;
+  font-size: 2em;
 }

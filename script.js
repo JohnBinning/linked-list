@@ -60,10 +60,3 @@ function makeLink (){
 // make a function that calls the above function on each keyup titleinput.keyup(abovefunction)
 
 // call the second function on page load - globally
-
-
-
-
-// $( "p" ).click(function() {
-//   $( this ).toggleClass( "highlight" );
-// });
