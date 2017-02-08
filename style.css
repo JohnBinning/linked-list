@@ -83,7 +83,11 @@ article {
   color: #455A64;
   text-align: left;
   padding: 1%;
+  border-bottom: 2px solid;
+  border-color: #CFD8DC;
 }
+
+
 
 .web-url {
   font-size: 18px;
@@ -91,6 +95,8 @@ article {
   color: #607D8B;
   text-align: left;
   padding: 1%;
+  border-bottom: 2px solid;
+  border-color: #CFD8DC;
 }
 
 hr {
