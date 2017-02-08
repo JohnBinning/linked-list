@@ -34,15 +34,19 @@ $('#enter-btn').on('click', function() {
 function makeLink (){
 
   $('.links-area').prepend(
-    '<article>' + '<div class="web-title">' + titleInput.val() + '</div>' + '<div class="web-url">' + urlInput.val() + '</div>' + '<button class="read-btn">Read</button>' + '<button class="delete-btn">Delete</button>' + '</article>');
+    '<article class="linkCard">' + '<div class="web-title">' + titleInput.val() + '</div>' + '<div class="web-url">' + urlInput.val() + '</div>' + '<button class="read-btn">Read</button>' + '<button class="delete-btn">Delete</button>' + '</article>');
 
     $('.read-btn').click(function() {
       $(this).toggleClass('read');
     });
 
-    $('.delete-btn').click(function(){
-      $('article').remove('article');
-    });
+    // $('.delete-btn').click(function(){
+    //   $('article').remove('article');
+    // });
+
+    $('article').on('click', 'button', function(){
+      $(this).parent().remove('article');
+    })
 
     $('enter-btn').click(function(){
     });
