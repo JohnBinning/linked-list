@@ -11,6 +11,11 @@ $(urlInput).on('keyup', function() {
 });
 
 
+// make a function that disables the enter button based on if title || url = ""
+
+// make a function that calls the above function on each keyup titleinput.keyup(abovefunction)
+
+// call the second function on page load - globally
 function buttonDisable() {
   if (titleInput.val()==="" || urlInput.val()==="") {
     console.log('true')
@@ -34,16 +39,21 @@ $('#enter-btn').on('click', function() {
 function makeLink (){
 
   $('.links-area').prepend(
-    '<article class="linkCard">' + '<div class="web-title">' + titleInput.val() + '</div>' + '<div class="web-url">' + urlInput.val() + '</div>' + '<button class="read-btn">Read</button>' + '<button class="delete-btn">Delete</button>' + '</article>');
+    '<article class="linkCard">' +
+      '<div class="web-title">' +
+        titleInput.val() +
+      '</div>' +
+      '<div class="web-url">' +
+        urlInput.val() +
+      '</div>' +
+      '<button class="read-btn">Read</button>' +
+      '<button class="delete-btn">Delete</button>' +
+    '</article>');
 
     // $('.read-btn').click(function() {
     //   $(this).toggleClass('read');
     // });
 
-    $('article').on('click', '.read-btn', function(){
-      $(this).toggleClass('read');
-      $(this).parent().toggleClass('read');
-    })
 
     $('article').on('click', '.delete-btn', function(){
      $(this).parent().remove('article');
@@ -51,21 +61,18 @@ function makeLink (){
    })
 
 
-    $('enter-btn').click(function(){
-    });
+    // $('enter-btn').click(function(){
+    // });
 
-    function totalCount() {
-      var totalNumber = $('article').length;
-      $('.total-counter').text(totalNumber);
-    }
     totalCount();
 };
 
+function totalCount() {
+  var totalNumber = $('article').length;
+  $('.total-counter').text(totalNumber);
+}
 
-
-
-// make a function that disables the enter button based on if title || url = ""
-
-// make a function that calls the above function on each keyup titleinput.keyup(abovefunction)
-
-// call the second function on page load - globally
+$('.links-area').on('click', '.read-btn', function(){
+  $(this).toggleClass('read');
+  $(this).parent().toggleClass('read');
+})
