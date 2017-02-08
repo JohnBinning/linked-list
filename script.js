@@ -3,12 +3,10 @@ var urlInput = $('#url-input')
 
 
 $(titleInput).on('keyup', function() {
-  console.log('hi');
   buttonDisable();
 });
 
 $(urlInput).on('keyup', function() {
-  console.log('hi');
   buttonDisable();
 });
 
@@ -26,14 +24,16 @@ function buttonDisable() {
 
 $('#enter-btn').on('click', function() {
     makeLink();
-    console.log("hello")
+    // console.log("hello");
 });
+
+
 
 
 // will want to call makeLink in another secondFunction.  secondFunction will need to audit that the proper inputs have been made on click of enter button then call makeLink.
 function makeLink (){
 
-  $('.section2').prepend(
+  $('.links-area').prepend(
     '<article>' + '<div class="web-title">' + titleInput.val() + '</div>' + '<div class="web-url">' + urlInput.val() + '</div>' + '<button class="read-btn">Read</button>' + '<button class="delete-btn">Delete</button>' + '</article>');
 
     $('.read-btn').click(function() {
@@ -43,6 +43,13 @@ function makeLink (){
     $('.delete-btn').click(function(){
       $('article').remove('article');
     });
+
+    $('enter-btn').click(function(){
+    });
+
+    var totalNumber = $('article').length;
+      $('.total-counter').text(totalNumber);
+
 };
 
 
