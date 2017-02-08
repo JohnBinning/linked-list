@@ -35,6 +35,14 @@ function makeLink (){
 
   $('.section2').prepend(
     '<article>' + '<div class="web-title">' + titleInput.val() + '</div>' + '<div class="web-url">' + urlInput.val() + '</div>' + '<button class="read-btn">Read</button>' + '<button class="delete-btn">Delete</button>' + '</article>');
+
+    $('.read-btn').click(function() {
+      $(this).toggleClass('read');
+    });
+
+    $('.delete-btn').click(function(){
+      $('article').remove('article');
+    });
 };
 
 
@@ -47,6 +55,8 @@ function makeLink (){
 // call the second function on page load - globally
 
 
-$('.read-btn').on('click', function() {
-  $('.read-btn').toggleClass('read');
-})
+
+
+// $( "p" ).click(function() {
+//   $( this ).toggleClass( "highlight" );
+// });

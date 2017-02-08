@@ -1,5 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
+  /*align-items: center;
+  justify-content: center;*/
 }
 
 section {
@@ -12,6 +14,7 @@ section {
 
 .section1 {
   background-color: #455A64;
+  /*display: flex;*/
 }
 
 .section1 h1 {
@@ -34,8 +37,8 @@ input, #enter-btn {
 }
 
 input {
-  /*width: 26vw;*/
-  width: 395px;
+  width: 39vw;
+  /*width: 395px;*/
   height: 6vh;
   font-size: 1.5em;
 }
@@ -44,8 +47,8 @@ input {
   background-color: #FFC107;
   border: 0;
   color: white;
-  /*width: 27vw;*/
-  width: 400px;
+  width: 40vw;
+  /*width: 400px;*/
   height: 6vh;
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
@@ -60,12 +63,14 @@ input {
 /*section 2:*/
 .section2 {
   background-color: #CFD8DC;
+  /*display: flex;
+  flex-direction: column;*/
 }
 
 article {
   min-height: 120px;
   border: 2px solid #607D8B;
-  margin: 5%;
+  margin: 3%;
   padding: 3%;
   background-color: #fff;
 }
@@ -115,4 +120,17 @@ hr {
   color: #f05a28;
   background-color: #f2f4f4;
   underline: #cfd8dc;
+}
+
+
+/*tablet layout, less than 768px more than 480*/
+@media screen and (max-width: 768px) {
+
+
+  /*display: flex;
+  flex-direction: column;*/
+
+
+
+
 }
