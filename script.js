@@ -36,24 +36,29 @@ function makeLink (){
   $('.links-area').prepend(
     '<article class="linkCard">' + '<div class="web-title">' + titleInput.val() + '</div>' + '<div class="web-url">' + urlInput.val() + '</div>' + '<button class="read-btn">Read</button>' + '<button class="delete-btn">Delete</button>' + '</article>');
 
-    $('.read-btn').click(function() {
-      $(this).toggleClass('read');
-    });
-
-    // $('.delete-btn').click(function(){
-    //   $('article').remove('article');
+    // $('.read-btn').click(function() {
+    //   $(this).toggleClass('read');
     // });
 
-    $('article').on('click', 'button', function(){
-      $(this).parent().remove('article');
+    $('article').on('click', '.read-btn', function(){
+      $(this).toggleClass('read');
+      $(this).parent().toggleClass('read');
     })
+
+    $('article').on('click', '.delete-btn', function(){
+     $(this).parent().remove('article');
+     totalCount();
+   })
+
 
     $('enter-btn').click(function(){
     });
 
-    var totalNumber = $('article').length;
+    function totalCount() {
+      var totalNumber = $('article').length;
       $('.total-counter').text(totalNumber);
-
+    }
+    totalCount();
 };
 
 
