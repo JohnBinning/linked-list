@@ -75,4 +75,4 @@ function totalCount() {
 $('.links-area').on('click', '.read-btn', function(){
   $(this).toggleClass('read');
   $(this).parent().toggleClass('read');
-})
+});
