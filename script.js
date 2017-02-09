@@ -63,6 +63,7 @@ function makeLink (){
 function totalCount() {
   var totalNumber = $('article').length;
   $('.total-counter').text(totalNumber);
+  return totalNumber;
 }
 
 
@@ -70,10 +71,20 @@ $('.links-area').on('click', '.read-btn', function(){
   $(this).toggleClass('read');
   $(this).parent().toggleClass('read');
   readCounter();
+  unReadCounter();
 });
 
 
 function readCounter() {
   var numItems = $('.linkCard .read').length
   $('.read-links').text(numItems);
+  return numItems;
 };
+
+function unReadCounter() {
+  var totalCoutnNum = parseInt(totalCount(), 10);
+  var readCountNum = parseInt(readCounter(), 10);
+  var unReadCountNum = totalCoutnNum - readCountNum;
+  $('.unread-links').text(unReadCountNum);
+  // return totalCoutnNum - readCountNum;
+}
