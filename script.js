@@ -36,6 +36,7 @@ $('#enter-btn').on('click', function() {
 
 
 // will want to call makeLink in another secondFunction.  secondFunction will need to audit that the proper inputs have been made on click of enter button then call makeLink.
+
 function makeLink (){
 
   $('.links-area').prepend(
@@ -43,26 +44,18 @@ function makeLink (){
       '<div class="web-title">' +
         titleInput.val() +
       '</div>' +
-      '<div class="web-url">' +
-        urlInput.val() +
+      '<div class="web-url">' + '<a href="http://' + urlInput.val() +  '" target="_blank">' +
+        urlInput.val() + '</a>' +
       '</div>' +
       '<button class="read-btn">Read</button>' +
       '<button class="delete-btn">Delete</button>' +
     '</article>');
-
-    // $('.read-btn').click(function() {
-    //   $(this).toggleClass('read');
-    // });
 
 
     $('article').on('click', '.delete-btn', function(){
      $(this).parent().remove('article');
      totalCount();
    })
-
-
-    // $('enter-btn').click(function(){
-    // });
 
     totalCount();
 };
@@ -72,7 +65,15 @@ function totalCount() {
   $('.total-counter').text(totalNumber);
 }
 
+
 $('.links-area').on('click', '.read-btn', function(){
   $(this).toggleClass('read');
   $(this).parent().toggleClass('read');
+  readCounter();
 });
+
+
+function readCounter() {
+  var readNumber = $('article').hasClass('read').length;
+  $('.read-links').text(readNumber);
+};
