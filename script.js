@@ -2,6 +2,7 @@ var titleInput = $('#title-input')
 var urlInput = $('#url-input')
 
 
+// call button disable function on page load - globally
 $(titleInput).on('keyup', function() {
   buttonDisable();
 });
@@ -15,30 +16,29 @@ $(urlInput).on('keyup', function() {
 
 // make a function that calls the above function on each keyup titleinput.keyup(abovefunction)
 
-// call the second function on page load - globally
 function buttonDisable() {
   if (titleInput.val()==="" || urlInput.val()==="") {
-    console.log('true')
     $('#enter-btn').prop('disabled', true);
   } else {
-    console.log('false')
     $('#enter-btn').prop('disabled', false);
   }
 }
 
 
+// selecting 'enter' button and adding a 'click' event listener
+// calling the makeLink function
 $('#enter-btn').on('click', function() {
     makeLink();
-    // console.log("hello");
 });
 
-
-
-
-// will want to call makeLink in another secondFunction.  secondFunction will need to audit that the proper inputs have been made on click of enter button then call makeLink.
-
 function makeLink (){
+  addCard();
+  removeCard();
+}
 
+
+// 1. prepend card
+function addCard() {
   $('.links-area').prepend(
     '<article class="linkCard">' +
       '<div class="web-title">' +
@@ -50,23 +50,21 @@ function makeLink (){
       '<button class="read-btn">Read</button>' +
       '<button class="delete-btn">Delete</button>' +
     '</article>');
+  }
 
-
+// 2.delete card funcionality
+function removeCard() {
     $('article').on('click', '.delete-btn', function(){
      $(this).parent().remove('article');
      totalCount();
+     unReadCounter();
    })
-
     totalCount();
+    unReadCounter();
 };
 
-function totalCount() {
-  var totalNumber = $('article').length;
-  $('.total-counter').text(totalNumber);
-  return totalNumber;
-}
 
-
+// 'Read' button functionality
 $('.links-area').on('click', '.read-btn', function(){
   $(this).toggleClass('read');
   $(this).parent().toggleClass('read');
@@ -75,12 +73,23 @@ $('.links-area').on('click', '.read-btn', function(){
 });
 
 
+// COUNTER FUNCTIONS:
+
+// Total number counter:
+function totalCount() {
+  var totalNumber = $('article').length;
+  $('.total-counter').text(totalNumber);
+  return totalNumber;
+}
+
+// 'Read' number counter
 function readCounter() {
   var numItems = $('.linkCard .read').length
   $('.read-links').text(numItems);
   return numItems;
 };
 
+// 'Unread' number counter
 function unReadCounter() {
   var totalCoutnNum = parseInt(totalCount(), 10);
   var readCountNum = parseInt(readCounter(), 10);
