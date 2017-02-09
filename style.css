@@ -43,10 +43,10 @@ input, #enter-btn {
     margin: auto;
     margin-top: 50px;
     letter-spacing: .1em;
+    width: 39vw;
 }
 
 input {
-  width: 39vw;
   height: 6vh;
   font-size: 1.5em;
 }
@@ -143,15 +143,17 @@ article {
 
 
 @media screen and (max-width: 820px) {
-  h1 {
-    font-size: 2.2em;
+
+.section1 h1 {
+    font-size: 3em;
+    /*width: 25vw;*/
 }
 
 /*tablet layout*/
 @media screen and (max-width: 768px) {
 
 .section1 h1 {
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 section {
