@@ -48,8 +48,8 @@ function addCard() {
         urlInput.val() + '</a>' +
       '</div>' +
       '<button class="read-btn">Read</button>' +
-      '<button class="delete-btn">Delete</button>' +
-    '</article>');
+      '<button class="delete-btn">Delete</button>');
+
   }
 
 // 2.delete card funcionality
