@@ -74,6 +74,6 @@ $('.links-area').on('click', '.read-btn', function(){
 
 
 function readCounter() {
-  var readNumber = $('article').hasClass('read').length;
-  $('.read-links').text(readNumber);
+  var numItems = $('.linkCard .read').length
+  $('.read-links').text(numItems);
 };
